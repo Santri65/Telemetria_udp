@@ -1,35 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="service.TelemetryProcessorTest" tests="8" skipped="0" failures="2" errors="0" timestamp="2026-10-01T15:52:30.792Z" hostname="DESKTOP-6V2F18E" time="0.119">
+<testsuite name="service.TelemetryProcessorTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-01T23:31:17.477Z" hostname="DESKTOP-6V2F18E" time="0.176">
   <properties/>
-  <testcase name="CP-08: Consulta de estado con comando STATUS" classname="service.TelemetryProcessorTest" time="0.075">
-    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;STATUS_OK;sensor-42;TEMP;31.0&gt; but was: &lt;STATUS_OKsensor-42;TEMP;31.0&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;STATUS_OK;sensor-42;TEMP;31.0&gt; but was: &lt;STATUS_OKsensor-42;TEMP;31.0&gt;
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at app//service.TelemetryProcessorTest.testStatusQuery(TelemetryProcessorTest.java:91)
-	at java.base@17.0.12/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base@17.0.12/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base@17.0.12/java.util.ArrayList.forEach(ArrayList.java:1511)
-</failure>
-  </testcase>
-  <testcase name="CP-07: Error por tipo de sensor no soportado" classname="service.TelemetryProcessorTest" time="0.002"/>
-  <testcase name="CP-02: Alerta de temperatura alta (&gt; 40.0)" classname="service.TelemetryProcessorTest" time="0.003"/>
-  <testcase name="CP-03: Alerta de congelamiento / temperatura bajo cero (&lt; 0.0)" classname="service.TelemetryProcessorTest" time="0.006"/>
-  <testcase name="CP-05: Registro y alertas de baterÃ­a" classname="service.TelemetryProcessorTest" time="0.003"/>
-  <testcase name="CP-01: Registro de temperatura en rango normal" classname="service.TelemetryProcessorTest" time="0.007"/>
-  <testcase name="CP-04: Registro y alertas de humedad" classname="service.TelemetryProcessorTest" time="0.003"/>
-  <testcase name="CP-06: Manejo de formatos invÃ¡lidos y errores de parseo" classname="service.TelemetryProcessorTest" time="0.005">
-    <failure message="java.lang.NullPointerException: Cannot invoke &quot;String.trim()&quot; because &quot;rawMessage&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;String.trim()&quot; because &quot;rawMessage&quot; is null
-	at service.TelemetryProcessor.process(TelemetryProcessor.java:28)
-	at service.TelemetryProcessorTest.testInvalidFormats(TelemetryProcessorTest.java:65)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-</failure>
-  </testcase>
+  <testcase name="CP-08: Consulta de estado con comando STATUS" classname="service.TelemetryProcessorTest" time="0.104"/>
+  <testcase name="CP-07: Error por tipo de sensor no soportado" classname="service.TelemetryProcessorTest" time="0.003"/>
+  <testcase name="CP-02: Alerta de temperatura alta (&gt; 40.0)" classname="service.TelemetryProcessorTest" time="0.004"/>
+  <testcase name="CP-03: Alerta de congelamiento / temperatura bajo cero (&lt; 0.0)" classname="service.TelemetryProcessorTest" time="0.003"/>
+  <testcase name="CP-05: Registro y alertas de baterÃ­a" classname="service.TelemetryProcessorTest" time="0.009"/>
+  <testcase name="CP-01: Registro de temperatura en rango normal" classname="service.TelemetryProcessorTest" time="0.011"/>
+  <testcase name="CP-04: Registro y alertas de humedad" classname="service.TelemetryProcessorTest" time="0.005"/>
+  <testcase name="CP-06: Manejo de formatos invÃ¡lidos y errores de parseo" classname="service.TelemetryProcessorTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

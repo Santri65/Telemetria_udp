@@ -25,7 +25,7 @@ public class TelemetryProcessor {
     public String process(String rawMessage) {
         // TODO Paso 1.1: Validar que el mensaje no sea nulo ni esté vacío (usar trim()).
         // Si no es válido, retornar "ERROR;INVALID_FORMAT".
-        if(rawMessage == null | rawMessage.trim().isEmpty()){    
+        if(rawMessage == null || rawMessage.trim().isEmpty()){    
             return "ERROR;INVALID_FORMAT";
         }
 
@@ -54,7 +54,7 @@ public class TelemetryProcessor {
 
             TelemetryData data = lastReadings.get(parts[1]);
 
-            return "STATUS_OK" + parts[1] + ";" + data.getSensorType() + ";" + data.getValue();
+            return "STATUS_OK;" + parts[1] + ";" + data.getSensorType() + ";" + data.getValue();
         }
         
 

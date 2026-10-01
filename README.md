@@ -111,46 +111,33 @@ Observará que el proyecto compila correctamente pero las pruebas fallan indican
   ```
   *Debe superar los 8 casos de prueba unitarios (CP-01 a CP-08).*
 
-  Pondre lo que salio del test por ahora:
+  El test ahora si dio correctamente con unos cambios menores al volver a leer el codigo: 
   ./gradlew :PeerB:test --tests "service.TelemetryProcessorTest"
-Reusing configuration cache.
+  Starting a Gradle Daemon, 2 incompatible and 1 stopped Daemons could not be reused, use --status for details
+  Reusing configuration cache.
 
-> Task :PeerB:test
+  > Task :PeerB:test
 
-TelemetryProcessorTest > CP-08: Consulta de estado con comando STATUS FAILED
-    org.opentest4j.AssertionFailedError at TelemetryProcessorTest.java:91
+  TelemetryProcessorTest > CP-08: Consulta de estado con comando STATUS PASSED
 
-TelemetryProcessorTest > CP-07: Error por tipo de sensor no soportado PASSED
+  TelemetryProcessorTest > CP-07: Error por tipo de sensor no soportado PASSED
 
-TelemetryProcessorTest > CP-02: Alerta de temperatura alta (> 40.0) PASSED
+  TelemetryProcessorTest > CP-02: Alerta de temperatura alta (> 40.0) PASSED
 
-TelemetryProcessorTest > CP-03: Alerta de congelamiento / temperatura bajo cero (< 0.0) PASSED
+  TelemetryProcessorTest > CP-03: Alerta de congelamiento / temperatura bajo cero (< 0.0) PASSED
 
-TelemetryProcessorTest > CP-05: Registro y alertas de bater├¡a PASSED
+  TelemetryProcessorTest > CP-05: Registro y alertas de bater├¡a PASSED
 
-TelemetryProcessorTest > CP-01: Registro de temperatura en rango normal PASSED
+  TelemetryProcessorTest > CP-01: Registro de temperatura en rango normal PASSED
 
-TelemetryProcessorTest > CP-04: Registro y alertas de humedad PASSED
+  TelemetryProcessorTest > CP-04: Registro y alertas de humedad PASSED
 
-TelemetryProcessorTest > CP-06: Manejo de formatos inv├ílidos y errores de parseo FAILED
-    java.lang.NullPointerException at TelemetryProcessorTest.java:65
+  TelemetryProcessorTest > CP-06: Manejo de formatos inv├ílidos y errores de parseo PASSED
 
-8 tests completed, 2 failed
-
-> Task :PeerB:test FAILED
-
-FAILURE: Build failed with an exception.
-
-* What went wrong:
-Execution failed for task ':PeerB:test'.
-> There were failing tests. See the report at: file:///D:/Estudio/Universidades/Icesi/5%20Semestre/Computacion%20en%20internet%20I/Sesion%2012/Telemetria_udp/PeerB/build/reports/tests/test/index.html
-
-* Try:
-> Run with --scan to generate a Build Scan (Powered by Develocity).
-
-BUILD FAILED in 9s
-3 actionable tasks: 3 executed
-Configuration cache entry reused.
+  BUILD SUCCESSFUL in 31s
+  3 actionable tasks: 2 executed, 1 up-to-date
+  Configuration cache entry reused.
+  
 ---
 
 ### Paso 2: Servidor UDP de la Estación Base (20 minutos)
