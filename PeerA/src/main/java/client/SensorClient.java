@@ -60,6 +60,27 @@ public class SensorClient {
      */
     public String sendAndReceive(String message) throws IOException {
         // TODO Paso 3.1: Crear un DatagramSocket (se recomienda usar bloque try-with-resources).
+        try{
+            DatagramSocket socket = new DatagramSocket();
+            
+            socket.setSoTimeout(this.timeoutMs);
+
+            byte[] sendData = message.getBytes(StandardCharsets.UTF_8);
+            InetAddress serverAddress = InetAddress.getByName(this.serverHost);
+            DatagramPacket packet = new DatagramPacket(sendData, sendData.length, serverAddress, this.serverPort);
+            socket.send(packet);
+
+            byte[] receiveBuffer = new byte[1024];
+            DatagramPacket responsePacket = new DatagramPacket(receiveBuffer, receiveBuffer.length);
+            socket.receive(responsePacket);
+
+            String response = new String(responsePacket.getData(), responsePacket.getOffset(), responsePacket.getLength(), StandardCharsets.UTF_8).trim();
+            
+            return response;
+
+        } catch (IOException e){
+            throw new IOException("Error creating DatagramSocket", e);
+        }
 
         // TODO Paso 3.2: Configurar el tiempo de espera máximo mediante socket.setSoTimeout(this.timeoutMs).
 
@@ -75,7 +96,7 @@ public class SensorClient {
         // TODO Paso 3.7: Convertir los bytes recibidos a String UTF-8 usando offset y length,
         // aplicar trim() y retornar la cadena resultante.
 
-        return null; // Reemplazar con su implementación
+         // Reemplazar con su implementación
     }
 
     public String getServerHost() {

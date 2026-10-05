@@ -184,7 +184,38 @@ Observará que el proyecto compila correctamente pero las pruebas fallan indican
   ./gradlew :PeerA:test
   ```
   *Debe superar las 3 pruebas del cliente (CL-01 a CL-03, incluyendo la verificación de timeout).*
+  Prueba inicial de las 3 pruebas: 
+  ./gradlew :PeerA:test
+  Starting a Gradle Daemon, 1 incompatible Daemon could not be reused, use --status for details
+  Calculating task graph as no cached configuration is available for tasks: :PeerA:test
 
+  > Task :PeerA:test
+
+  SensorClientTest > CL-02: El cliente consulta estado con comando STATUS PASSED
+
+  SensorClientTest > CL-03: El cliente lanza SocketTimeoutException cuando el servidor no responde FAILED
+    org.opentest4j.AssertionFailedError at SensorClientTest.java:121
+        Caused by: java.io.IOException at SensorClientTest.java:122
+            Caused by: java.net.SocketTimeoutException at SensorClientTest.java:122
+
+  SensorClientTest > CL-01: El cliente env├¡a telemetr├¡a formateada y recibe respuesta PASSED
+
+  3 tests completed, 1 failed
+
+  > Task :PeerA:test FAILED
+
+  FAILURE: Build failed with an exception.
+
+  * What went wrong:
+  Execution failed for task ':PeerA:test'.
+  > There were failing tests. See the report at: file:///D:/Estudio/Universidades/Icesi/5%20Semestre/Computacion%20en%20internet%20I/Sesion%2012/Telemetria_udp/PeerA/build/reports/tests/test/index.html
+
+  * Try:
+  > Run with --scan to generate a Build Scan (Powered by Develocity).
+
+  BUILD FAILED in 36s
+  3 actionable tasks: 3 executed
+  Configuration cache entry stored.
 ---
 
 ### Paso 4: Verificación Integral
