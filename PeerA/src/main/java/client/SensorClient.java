@@ -78,7 +78,9 @@ public class SensorClient {
             
             return response;
 
-        } catch (IOException e){
+        } catch (SocketTimeoutException e) {
+            throw e;
+        }catch (IOException e){
             throw new IOException("Error creating DatagramSocket", e);
         }
 

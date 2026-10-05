@@ -1,33 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="client.SensorClientTest" tests="3" skipped="0" failures="1" errors="0" timestamp="2026-10-05T22:29:29.185Z" hostname="DESKTOP-6V2F18E" time="0.55">
+<testsuite name="client.SensorClientTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-05T22:40:19.645Z" hostname="DESKTOP-6V2F18E" time="0.555">
   <properties/>
-  <testcase name="CL-02: El cliente consulta estado con comando STATUS" classname="client.SensorClientTest" time="0.07"/>
-  <testcase name="CL-03: El cliente lanza SocketTimeoutException cuando el servidor no responde" classname="client.SensorClientTest" time="0.469">
-    <failure message="org.opentest4j.AssertionFailedError: Debe lanzar SocketTimeoutException al transcurrir el timeout. ==&gt; Unexpected exception type thrown, expected: &lt;java.net.SocketTimeoutException&gt; but was: &lt;java.io.IOException&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Debe lanzar SocketTimeoutException al transcurrir el timeout. ==&gt; Unexpected exception type thrown, expected: &lt;java.net.SocketTimeoutException&gt; but was: &lt;java.io.IOException&gt;
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at app//org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
-	at app//org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
-	at app//org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3131)
-	at app//client.SensorClientTest.testTimeoutWhenServerDoesNotReply(SensorClientTest.java:121)
-	at java.base@17.0.12/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base@17.0.12/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base@17.0.12/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: java.io.IOException: Error creating DatagramSocket
-	at client.SensorClient.sendAndReceive(SensorClient.java:82)
-	at client.SensorClient.sendTelemetry(SensorClient.java:38)
-	at client.SensorClientTest.lambda$testTimeoutWhenServerDoesNotReply$3(SensorClientTest.java:122)
-	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
-	... 6 more
-Caused by: java.net.SocketTimeoutException: Receive timed out
-	at java.base/sun.nio.ch.DatagramChannelImpl.trustedBlockingReceive(DatagramChannelImpl.java:703)
-	at java.base/sun.nio.ch.DatagramChannelImpl.blockingReceive(DatagramChannelImpl.java:633)
-	at java.base/sun.nio.ch.DatagramSocketAdaptor.receive(DatagramSocketAdaptor.java:240)
-	at java.base/java.net.DatagramSocket.receive(DatagramSocket.java:700)
-	at client.SensorClient.sendAndReceive(SensorClient.java:75)
-	... 9 more
-</failure>
-  </testcase>
-  <testcase name="CL-01: El cliente envÃ­a telemetrÃ­a formateada y recibe respuesta" classname="client.SensorClientTest" time="0.009"/>
+  <testcase name="CL-02: El cliente consulta estado con comando STATUS" classname="client.SensorClientTest" time="0.104"/>
+  <testcase name="CL-03: El cliente lanza SocketTimeoutException cuando el servidor no responde" classname="client.SensorClientTest" time="0.443"/>
+  <testcase name="CL-01: El cliente envÃ­a telemetrÃ­a formateada y recibe respuesta" classname="client.SensorClientTest" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
