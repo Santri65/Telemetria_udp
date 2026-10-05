@@ -153,6 +153,20 @@ Observará que el proyecto compila correctamente pero las pruebas fallan indican
   ./gradlew :PeerB:test --tests "service.BaseStationServerTest"
   ```
   *Debe superar las 2 pruebas de integración UDP (IT-01 e IT-02).*
+  Aqui el mensaje de la prueba que salio bien:
+  ./gradlew :PeerB:test --tests "service.BaseStationServerTest"
+  Starting a Gradle Daemon, 1 incompatible and 1 stopped Daemons could not be reused, use --status for details
+  Calculating task graph as no cached configuration is available for tasks: :PeerB:test --tests service.BaseStationServerTest
+
+  > Task :PeerB:test
+
+  BaseStationServerTest > IT-02: El servidor procesa m├║ltiples solicitudes de diferentes dispositivos PASSED
+
+  BaseStationServerTest > IT-01: El servidor recibe datagrama UDP y responde correctamente al remitente PASSED
+
+  BUILD SUCCESSFUL in 26s
+  3 actionable tasks: 2 executed, 1 up-to-date
+  Configuration cache entry stored.
 
 ---
 
