@@ -187,7 +187,6 @@ Observará que el proyecto compila correctamente pero las pruebas fallan indican
   Se intento de nuevo la prueba y ahora si paso: 
   ./gradlew :PeerA:test               
   Reusing configuration cache.
-
   > Task :PeerA:test
 
   SensorClientTest > CL-02: El cliente consulta estado con comando STATUS PASSED
@@ -213,7 +212,12 @@ Debe obtener el resultado:
 BUILD SUCCESSFUL
 13 passed tests
 ```
+Resultado:
+./gradlew test                      Reusing configuration cache.
 
+BUILD SUCCESSFUL in 3s
+6 actionable tasks: 6 up-to-date
+Configuration cache entry reused.
 ---
 
 ### Paso 5: Prueba Interactiva en Vivo (15 minutos)
